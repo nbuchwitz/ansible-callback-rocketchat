@@ -1,12 +1,14 @@
-# Rockchat callback plugin for Ansible
+# Rocketchat callback plugin for Ansible
 
 ![Example output](doc/img/rocketchat-example.png)
 
 This callback plugin is based on the work of Deepak Kothandan, which has been published on [GitHub](https://gist.github.com/Deepakkothandan/4808bcb4e9881e2d4fe8a643a9bab4eb)
 
-## Usage
+## Installation
 
-Copy the plugin (`rocketchat.py`) into your `callback_plugins` folder and configure at least the webhook. 
+Copy the plugin (`rocketchat.py`) into your `callback_plugins` folder and configure at least the webhook.
+
+Make sure that the python module `prettytable` is installed on your ansible host. Otherwise the callback plugin will fail with an warning. 
 
 The plugin can be configured via `ansible.cfg` (section `callback_rocketchat`) or environment variables:
 
@@ -28,4 +30,12 @@ channel = #yoloops
 icon_emoji = :superhero:
 webhook_url = https://rocket.example.com/yourrocketchatwebhooktoken
 ```
+
+## FAQ
+
+### I have the `prettytable` plugins installed, but I still get the warning
+
+This is probably happens, because you have installed the module with `pip`. Pip installs it into `/usr/local/lib/<PYTHONVERSION>/site-packages` instead of `/usr/lib/<PYTHONVERSION>/site-packages`, which is included in ansibles python library path.
+
+If you're using CentOS try installing in with `dnf`: `dnf install python3-prettytable.noarch`
 
