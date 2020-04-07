@@ -158,7 +158,6 @@ class CallbackModule(CallbackBase):
         }
 
         data = json.dumps(payload)
-        print(data)
         self._display.debug(data)
         self._display.debug(self.webhook_url)
         try:
