@@ -8,7 +8,7 @@ This callback plugin is based on the work of Deepak Kothandan, which has been pu
 
 Copy the plugin (`rocketchat.py`) into your `callback_plugins` folder and configure at least the webhook.
 
-Make sure that the python module `prettytable` is installed on your ansible host. Otherwise the callback plugin will fail with an warning. 
+Make sure that the python module `prettytable` is installed on your ansible host, otherwise the callback plugin will fail with an warning. 
 
 The plugin can be configured via `ansible.cfg` (section `callback_rocketchat`) or environment variables:
 
@@ -17,9 +17,9 @@ The plugin can be configured via `ansible.cfg` (section `callback_rocketchat`) o
 | `webhook_url` | `ROCKETCHAT_WEBHOOK_URL` | **YES** | | Rocketchat Webhook URL |
 | `username` | `ROCKETCHAT_USERNAME` | no | `ansible` | Username to post as |
 | `channel` | `ROCKETCHAT_CHANNEL` | no | (configured in webhook) | Rocketchat room to post in. The default (empty) will use the default configured in the webhook. |
-| `icon_url` | `ROCKETCHAT_ICON_URL` | no | - | Icon url for user avatar |
-| `icon_emoji` | `ROCKETCHAT_ICON_emoji` | no | - | Icon emoji for user avatar |
-| `validate_certs` | `ROCKETCHAT_VALIDATE_CERTS` | no | `true` | validate the TLS certificate of the Rocketchat server. (For HTTPS URLs) |
+| `icon_url` | `ROCKETCHAT_ICON_URL` | no | - | URL to image which should be used for user avatar |
+| `icon_emoji` | `ROCKETCHAT_ICON_emoji` | no | - | Rocketchat emoji which should be used for user avatar  |
+| `validate_certs` | `ROCKETCHAT_VALIDATE_CERTS` | no | `true` | Validate the TLS certificate of the Rocketchat server. (For HTTPS URLs) |
 
 
 Example configuration:
