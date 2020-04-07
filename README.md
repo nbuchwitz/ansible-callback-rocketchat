@@ -37,5 +37,7 @@ webhook_url = https://rocket.example.com/yourrocketchatwebhooktoken
 
 This is probably happens, because you have installed the module with `pip`. Pip installs it into `/usr/local/lib/<PYTHONVERSION>/site-packages` instead of `/usr/lib/<PYTHONVERSION>/site-packages`, which is included in ansibles python library path.
 
-If you're using CentOS try installing in with `dnf`: `dnf install python3-prettytable.noarch`
+If you're using CentOS you can use the RPM package:
+
+```$ dnf install python3-prettytable.noarch```
 
