@@ -1,6 +1,6 @@
 # Rockchat callback plugin for Ansible
 
-![Example output][doc/img/rocketchat-example.png]
+![Example output](doc/img/rocketchat-example.png)
 
 This callback plugin is based on the work of Deepak Kothandan, which has been published on [GitHub](https://gist.github.com/Deepakkothandan/4808bcb4e9881e2d4fe8a643a9bab4eb)
 
